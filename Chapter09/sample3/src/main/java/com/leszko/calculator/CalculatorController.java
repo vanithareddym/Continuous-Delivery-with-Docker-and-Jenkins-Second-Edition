@@ -16,10 +16,10 @@ class CalculatorController {
 	@Autowired
 	private CalculationRepository calculationRepository;
 
-	@RequestMapping("/sum")
-	String sum(@RequestParam("a") Integer a,
+	@RequestMapping("/div")
+	String div(@RequestParam("a") Integer a,
 			@RequestParam("b") Integer b) {
-		String result = String.valueOf(calculator.sum(a, b));
+		String result = String.valueOf(calculator.div(a, b));
 		calculationRepository.save(new Calculation(a.toString(), b.toString(), result, Timestamp.from(Instant.now())));
 		return result;
 	}
