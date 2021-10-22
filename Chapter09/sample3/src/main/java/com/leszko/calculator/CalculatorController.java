@@ -25,7 +25,7 @@ class CalculatorController {
 		return result;
 	}
 
-        @RequestMapping(path="/div")
+        @RequestMapping(value="/div", method=RequestMethod.GET)
         String div(@RequestParam("a") Integer a,
                         @RequestParam("b") Integer b) {
                 String result = b!=0 ? String.valueOf(calculator.div(a, b)) : "Division by 0";
