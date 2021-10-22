@@ -17,7 +17,7 @@ class CalculatorController {
 	@Autowired
 	private CalculationRepository calculationRepository;
 
-	@RequestMapping("/sum")
+	@RequestMapping("/div")
 	String sum(@RequestParam("a") Integer a,
 			@RequestParam("b") Integer b) {
 		String result = String.valueOf(calculator.sum(a, b));
@@ -25,7 +25,7 @@ class CalculatorController {
 		return result;
 	}
 
-        @RequestMapping("/div")
+        @RequestMapping(value="/div")
         String div(@RequestParam("a") Integer a,
                         @RequestParam("b") Integer b) {
                 String result = b!=0 ? String.valueOf(calculator.div(a, b)) : "Division by 0";
