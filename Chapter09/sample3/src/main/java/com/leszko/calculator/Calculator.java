@@ -6,12 +6,12 @@ import org.springframework.stereotype.Service;
 /** Calculator logic */
 @Service
 public class Calculator {
-	@Cacheable("div")
+	@Cacheable("sum")
 	public int sum(int a, int b) {
 		return a + b;
 	}
 
-        @Cacheable("sum")
+        @Cacheable("div")
         public int div(int a, int b) {
                 return a / b;
         }
