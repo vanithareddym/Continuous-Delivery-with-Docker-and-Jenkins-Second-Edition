@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: calculator
-        image: leszko/calculator
+        image: vanithamreddy/calculator:1.0
         ports:
         - containerPort: 8080
         readinessProbe:
